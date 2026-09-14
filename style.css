@@ -7,8 +7,8 @@ body {
     background-image: url(tacos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100% auto;
 }
-
 header {
     padding: 0;
     margin: 0;
@@ -57,7 +57,6 @@ header nav ul li img {
 main {
     margin: 0;
     padding: 0;
-    width: 100%;
 }
 
 #main1 {
@@ -165,7 +164,7 @@ main {
     border-radius: 120px;
 }
 
-#transition ul li div {
+#transition ul li .lines {
     background-color: #3b3725;
     width: 30vh;
     height: 3px;
@@ -183,6 +182,7 @@ main {
     align-items: center;
     grid-area: 20px;
     gap: 20px;
+    width: 100% auto;
 }
 
 .livraison {
@@ -431,7 +431,7 @@ h3 {
 
 footer{
     background-color: #3b3725;
-    width: 100%;
+    width: 100% auto;
     padding: 1vh;
     display: flex;
     justify-content: center;
