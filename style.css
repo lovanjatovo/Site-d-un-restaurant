@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Luxurious+Roman&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Luxurious+Roman&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* ========== BASE ========== */
 *,
 *::before,
 *::after {
@@ -85,7 +84,6 @@ main {
     width: 100%;
 }
 
-/* ========== HERO (#main1) ========== */
 #main1 {
     margin-top: 8vh;
     display: flex;
@@ -186,7 +184,7 @@ main {
     border: 2px solid #fc8c24;
 }
 
-/* ========== TRANSITION ========== */
+
 #transition {
     background-color: #fbf5df;
     display: flex;
@@ -219,7 +217,7 @@ main {
     border-radius: 30px;
 }
 
-/* ========== MAIN2 ========== */
+
 #main2 {
     background-color: #fbf5df;
     padding: clamp(15px, 3vw, 30px);
@@ -347,7 +345,7 @@ textarea::placeholder {
     color: #fc8c24;
 }
 
-/* ========== TEMPLATES (menu cards) ========== */
+
 .templates {
     display: block;
     padding: 10px;
@@ -418,7 +416,7 @@ textarea::placeholder {
     white-space: nowrap;
 }
 
-/* ========== POPULAR ========== */
+
 .pop {
     flex: 1 1 280px;
     max-width: 420px;
@@ -499,7 +497,7 @@ h3 {
     text-align: center;
 }
 
-/* ========== FOOTER ========== */
+/* Footer */
 footer {
     background-color: #3b3725;
     width: 100%;
@@ -567,9 +565,7 @@ footer section a {
     text-align: center;
 }
 
-/* =====================================================
-   TABLET  (max-width: 1024px)
-   ===================================================== */
+/* For tablets */
 @media (max-width: 1024px) {
     header nav ul li img {
         width: 70px;
@@ -630,9 +626,7 @@ footer section a {
     }
 }
 
-/* =====================================================
-   MOBILE  (max-width: 768px)
-   ===================================================== */
+/* For mobile */
 @media (max-width: 768px) {
     body {
         background-attachment: scroll;
@@ -789,9 +783,7 @@ footer section a {
     }
 }
 
-/* =====================================================
-   SMALL MOBILE  (max-width: 480px)
-   ===================================================== */
+/* For small devices */
 @media (max-width: 480px) {
     header nav ul {
         padding-top: 45px;
