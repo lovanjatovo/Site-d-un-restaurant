@@ -202,7 +202,7 @@ main {
 
 #transition i {
     font-size: clamp(2rem, 6vw, 10vh);
-    padding: clamp(10px, 2vw, 18px);
+    padding: clamp(12px, 2vw, 20px);
     color: #3b3725;
     border: solid 4px #3b3725;
     border-radius: 120px;
@@ -337,6 +337,9 @@ textarea::placeholder {
     transition: 500ms;
     cursor: pointer;
     font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .livraison button:hover {
@@ -565,7 +568,7 @@ footer section a {
     text-align: center;
 }
 
-/* For tablets */
+/* For tablets on landscape and little desktops */
 @media (max-width: 1024px) {
     header nav ul li img {
         width: 70px;
@@ -626,7 +629,7 @@ footer section a {
     }
 }
 
-/* For mobile */
+/* For tablet on portrait */
 @media (max-width: 768px) {
     body {
         background-attachment: scroll;
@@ -638,8 +641,8 @@ footer section a {
     }
 
     header nav ul li img {
-        width: 56px;
-        height: 56px;
+        width: 60px;
+        height: 60px;
         top: 8px;
         left: 10px;
     }
@@ -790,8 +793,8 @@ footer section a {
     }
 
     header nav ul li img {
-        width: 48px;
-        height: 48px;
+        width: 50px;
+        height: 50px;
     }
 
     header nav ul li p {
