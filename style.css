@@ -75,7 +75,7 @@ main {
 }
 
 .left h1 {
-    font-size: 16vh;
+    font-size: 15vh;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -480,7 +480,7 @@ footer section a{
 }
 
 .copyright p{
-    font-size: 2vh;
+    font-size: 2.2vh;
     color: #ffffffb6;
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
