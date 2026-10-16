@@ -1,17 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Luxurious+Roman&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Luxurious+Roman&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* ========== BASE ========== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     padding: 0;
     margin: 0;
     background-image: url(tacos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100% auto;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
+
 header {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 ul {
@@ -20,6 +41,7 @@ ul {
     width: 100%;
     align-items: center;
     margin-top: 30px;
+    padding: 0;
 }
 
 header nav ul li {
@@ -28,8 +50,7 @@ header nav ul li {
 }
 
 header nav ul li p {
-    padding: 8px;
-    padding-inline: 10vh;
+    padding: 8px 24px;
     border: solid 2px rgba(255, 255, 255, 0.205);
     border-radius: 120px;
     color: rgba(255, 255, 255, 0.87);
@@ -51,114 +72,139 @@ header nav ul li img {
     left: 20px;
     width: 18vh;
     height: 18vh;
-    border-radius: 240px;
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 100;
 }
 
 main {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
+/* ========== HERO (#main1) ========== */
 #main1 {
     margin-top: 8vh;
     display: flex;
-    justify-content: center;
     justify-content: space-around;
     align-items: center;
-    padding: 10vh;
-    gap: 15vh;
+    padding: 6vh 4vw;
+    gap: 6vw;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .left {
     padding: 4px;
     color: #fbf5df;
+    flex: 1 1 320px;
+    max-width: 520px;
 }
 
 .left h1 {
-    font-size: 15vh;
+    font-size: clamp(3.5rem, 12vw, 16vh);
     margin: 0;
     padding: 0;
     text-align: center;
     font-weight: bold;
     font-family: "Luxurious Roman", serif;
+    line-height: 1.1;
 }
 
 .left p {
     text-align: center;
     font-weight: 200;
-    font-size: 3.5vh;
-    padding-inline: 14%;
+    font-size: clamp(1rem, 2.5vw, 3.5vh);
+    padding-inline: 8%;
     padding-bottom: 2vh;
     font-family: "Courgette", cursive;
+    line-height: 1.5;
 }
 
 .left button {
     display: flex;
-    margin: auto;
-    padding: 1vh;
+    margin: 0 auto;
+    padding: 1vh 2vh;
     border-radius: 120px;
-    width: 30%;
+    width: min(200px, 50%);
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
+    font-size: clamp(1rem, 2.5vw, 28px);
     background-color: transparent;
     border: solid #fbf5df 3px;
     color: #fbf5df;
     transition: 400ms;
     font-weight: bold;
     font-family: "Luxurious Roman", serif;
+    cursor: pointer;
 }
 
 .left button:hover {
     background-color: #fbf5dfa9;
     color: #3b3725;
-    cursor: pointer;
     border: solid #3b3725 3px;
 }
 
 .right {
     padding: 4px;
     display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 280px;
+    max-width: 420px;
 }
 
 .cadran {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: clamp(12px, 3vw, 50px);
     padding: 10px;
-    padding-inline: 10px;
 }
 
 .right img {
-    width: 25vh;
+    width: clamp(80px, 18vw, 25vh);
     aspect-ratio: 1/1;
     border-radius: 18px;
     border: solid 1.5px white;
+    object-fit: cover;
 }
 
 .right .imgCenter {
-    position: relative;
-    right: 50%;
-    height: 25vh;
-    top: 16vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(70px, 14vw, 25vh);
+    height: clamp(70px, 14vw, 25vh);
+    border-radius: 50%;
+    z-index: 2;
+    border: 2px solid #fc8c24;
 }
 
+/* ========== TRANSITION ========== */
 #transition {
     background-color: #fbf5df;
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
+    padding: 1.5rem 1rem;
+    width: 100%;
 }
 
 #transition ul {
     list-style: none;
-    gap: 15px;
+    gap: clamp(10px, 2vw, 15px);
+    margin: 0;
+    flex-wrap: wrap;
 }
 
 #transition i {
-    font-size: 10vh;
-    padding: 18px;
+    font-size: clamp(2rem, 6vw, 10vh);
+    padding: clamp(10px, 2vw, 18px);
     color: #3b3725;
     border: solid 4px #3b3725;
     border-radius: 120px;
@@ -166,32 +212,34 @@ main {
 
 #transition ul li .lines {
     background-color: #3b3725;
-    width: 30vh;
+    width: clamp(40px, 20vw, 30vh);
     height: 3px;
     margin: 0;
     padding: 0;
     border-radius: 30px;
 }
 
+/* ========== MAIN2 ========== */
 #main2 {
     background-color: #fbf5df;
-    padding: 15px;
+    padding: clamp(15px, 3vw, 30px);
     display: flex;
-    justify-content: center;
     justify-content: space-around;
-    align-items: center;
-    grid-area: 20px;
-    gap: 20px;
-    width: 100% auto;
+    align-items: flex-start;
+    gap: clamp(15px, 3vw, 30px);
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .livraison {
     padding: 5px;
+    flex: 1 1 280px;
+    max-width: 420px;
 }
 
 .livraison form {
     border: solid 2px #fffcee96;
-    padding: 25px;
+    padding: clamp(16px, 3vw, 25px);
     border-radius: 10px;
     box-shadow: 1px 8px 12px #3b3725af;
     background-color: white;
@@ -199,14 +247,12 @@ main {
 
 .livraison form i {
     color: #3b3725;
-    font-size: 24px;
+    font-size: clamp(18px, 2.5vw, 24px);
+    flex-shrink: 0;
 }
 
 .livraison form ul {
     display: block;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
     list-style: none;
     gap: 10px;
     margin: 0;
@@ -216,28 +262,28 @@ main {
 .livraison form ul li {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .livraison form ul li span {
-    font-size: 24px;
+    font-size: clamp(1.1rem, 2.5vw, 24px);
     color: #fc8c24;
 }
 
-
 .livraison form p {
     text-align: center;
-    font-size: 2.5vh;
+    font-size: clamp(1rem, 2.2vw, 2.5vh);
     font-style: italic;
     font-weight: bold;
     color: #3b3725;
     font-family: "Luxurious Roman", serif;
+    margin-bottom: 12px;
 }
 
 .livraison li {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-evenly;
 }
 
 .space1, .space2 {
@@ -245,35 +291,34 @@ main {
 }
 
 .space3 {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
 }
 
 .livraison textarea {
-    align-items: center;
     text-align: center;
-    padding-top: 8px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
+    padding: 8px 12px;
+    height: 40px;
     border-radius: 120px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     border: solid #3b3725af 1px;
+    font-family: inherit;
+    resize: none;
 }
 
 textarea::placeholder {
-    padding-top: 1px;
     color: #3b3725af;
 }
 
 .livraison input {
-    display: flex;
-    justify-content: center;
-    margin: auto;
     text-align: center;
-    padding: 4px;
+    padding: 8px 12px;
     border-radius: 120px;
     border: solid #3b3725af 1px;
+    width: 100%;
+    max-width: 350px;
+    font-family: inherit;
 }
 
 .livraison input::placeholder {
@@ -282,28 +327,32 @@ textarea::placeholder {
 
 .livraison button {
     display: flex;
-    margin: auto;
+    margin: 12px auto 0;
     border-radius: 280px;
     border: solid #fc8c24 3px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    padding: 8px;
+    padding: 10px 24px;
     font-weight: bold;
     color: #fbf5df;
     background-color: #fc8c24;
     transition: 500ms;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .livraison button:hover {
-    cursor: pointer;
     background-color: white;
     border: solid #fc8c24 3px;
     color: #fc8c24;
 }
 
+/* ========== TEMPLATES (menu cards) ========== */
 .templates {
     display: block;
     padding: 10px;
+    flex: 1 1 300px;
+    max-width: 520px;
 }
 
 .templates section {
@@ -312,49 +361,67 @@ textarea::placeholder {
     padding: 10px;
     background-color: white;
     box-shadow: 1px 8px 12px #3b3725af;
-    margin-block: 20px;
+    margin-block: 16px;
 }
 
 .templates .recipe {
     display: flex;
-    justify-content: center;
     justify-content: space-around;
     align-items: center;
     gap: 12px;
     padding: 8px;
+    flex-wrap: wrap;
 }
 
 .onPlate {
-    padding: 8px;
+    padding: 4px;
+    flex-shrink: 0;
 }
 
 .onPlate img {
-    width: 20vh;
-    height: 16vh;
+    width: clamp(80px, 18vw, 20vh);
+    height: clamp(64px, 14vw, 16vh);
     border-radius: 25px;
+    object-fit: cover;
+}
+
+.texts {
+    flex: 1 1 140px;
+    min-width: 0;
 }
 
 .texts h1 {
-    font-size: 36px;
+    font-size: clamp(1.25rem, 3vw, 36px);
     font-style: italic;
     font-family: "Luxurious Roman", serif;
+    margin: 0 0 6px;
 }
 
 .texts p {
     font-weight: 100;
-    font-size: 15px;
-    margin-inline-end: 95px;
+    font-size: clamp(0.8rem, 1.8vw, 15px);
+    margin: 0;
     font-family: "Courgette", cursive;
+    line-height: 1.4;
 }
 
 .templates section h2 {
-    padding: 5px;
-    font-size: 20px;
+    padding: 6px 12px;
+    font-size: clamp(0.9rem, 2vw, 20px);
     text-align: center;
     color: #3b3725;
-    width: 23vh;
+    min-width: 90px;
     border: #3b3725 solid 1px;
     border-radius: 340px;
+    margin: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* ========== POPULAR ========== */
+.pop {
+    flex: 1 1 280px;
+    max-width: 420px;
 }
 
 .popular {
@@ -387,19 +454,23 @@ textarea::placeholder {
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 24vh;
-    height: 18vh;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 4/3;
+    max-width: 24vh;
     border-radius: 20px;
     box-shadow: 1px 4px 8px #3b3725af;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 h3 {
     text-align: center;
     color: #3b3725;
-    font-size: 34px;
+    font-size: clamp(1.4rem, 3.5vw, 34px);
     font-family: "Luxurious Roman", serif;
+    margin: 0 0 16px;
 }
 
 .popular h1 {
@@ -409,7 +480,7 @@ h3 {
     margin: 0;
     background-color: #3b3725;
     padding: 5px 10px;
-    font-size: 20px;
+    font-size: clamp(0.8rem, 2vw, 20px);
     border-bottom-right-radius: 10px;
     font-weight: bold;
 }
@@ -421,69 +492,386 @@ h3 {
     margin: 0;
     background-color: #fc8c24;
     color: white;
-    font-size: 18px;
-    padding: 5px 4px;
+    font-size: clamp(0.75rem, 1.8vw, 18px);
+    padding: 5px 8px;
     border-top-left-radius: 10px;
-    width: 10vh;
-    height: 2vh;
+    min-width: 60px;
     text-align: center;
 }
 
-footer{
+/* ========== FOOTER ========== */
+footer {
     background-color: #3b3725;
-    width: 100% auto;
-    padding: 1vh;
+    width: 100%;
+    padding: 2vh 1rem;
     display: flex;
-    justify-content: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
-footer section ul{
+footer section ul {
     text-align: center;
     display: block;
     list-style: none;
     gap: 18px;
+    margin: 0;
+    padding: 0;
 }
 
-footer section ul li{
+footer section ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1vh;
+    margin: 1vh 0;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
-footer section ul li i{
+footer section ul li i {
     color: #fbf5df;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
+    flex-shrink: 0;
 }
 
-footer section h1{
+footer section h1 {
     color: #fbf5df;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 20px);
     font-weight: bold;
+    margin-bottom: 8px;
 }
 
-footer section a{
+footer section a {
     color: #fbf5df;
-    font-size: 16px;
+    font-size: clamp(0.85rem, 2vw, 16px);
     text-decoration: none;
+    word-break: break-word;
 }
 
 .copyright {
-    background-color:#3b3725;
+    background-color: #3b3725;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-.copyright p{
-    font-size: 2.2vh;
+.copyright p {
+    font-size: clamp(0.75rem, 2vw, 2vh);
     color: #ffffffb6;
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
-    padding: 0;
-    padding-bottom: 1.8vh;
+    padding: 0 1rem 1.8vh;
+    text-align: center;
+}
+
+/* =====================================================
+   TABLET  (max-width: 1024px)
+   ===================================================== */
+@media (max-width: 1024px) {
+    header nav ul li img {
+        width: 70px;
+        height: 70px;
+        top: 10px;
+        left: 12px;
+    }
+
+    header nav ul li p {
+        font-size: 20px;
+        padding: 6px 18px;
+    }
+
+    #main1 {
+        flex-direction: column;
+        margin-top: 6vh;
+        padding: 4vh 4vw;
+        gap: 4vh;
+        text-align: center;
+    }
+
+    .left {
+        max-width: 100%;
+    }
+
+    .right {
+        max-width: 100%;
+    }
+
+    #main2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .livraison,
+    .templates,
+    .pop {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .templates .recipe {
+        justify-content: flex-start;
+    }
+
+    .popular {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .div1, .div2, .div3, .div4, .div5 {
+        max-width: 100%;
+    }
+
+    .div5 {
+        grid-column: 2;
+    }
+}
+
+/* =====================================================
+   MOBILE  (max-width: 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        padding-top: 50px;
+    }
+
+    header nav ul li img {
+        width: 56px;
+        height: 56px;
+        top: 8px;
+        left: 10px;
+    }
+
+    header nav ul li p {
+        font-size: 16px;
+        padding: 6px 14px;
+    }
+
+    #main1 {
+        margin-top: 2vh;
+        padding: 3vh 4vw 4vh;
+        gap: 3vh;
+    }
+
+    .left h1 {
+        font-size: clamp(2.8rem, 14vw, 4.5rem);
+    }
+
+    .left p {
+        padding-inline: 4%;
+        font-size: 1rem;
+    }
+
+    .left button {
+        width: min(160px, 55%);
+        padding: 10px 16px;
+        font-size: 1.1rem;
+    }
+
+    .cadran {
+        gap: 12px;
+    }
+
+    .right img {
+        width: clamp(70px, 22vw, 110px);
+    }
+
+    .right .imgCenter {
+        width: clamp(60px, 18vw, 90px);
+        height: clamp(60px, 18vw, 90px);
+    }
+
+    #transition {
+        padding: 1.2rem 0.75rem;
+    }
+
+   #transition ul li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem; 
+    padding: 18px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #3b3725;
+    border-radius: 120px;
+    color: #3b3725;
+    width: 6vh;
+}
+
+    #transition ul li .lines {
+        width: clamp(30px, 18vw, 80px);
+    }
+
+    #main2 {
+        padding: 16px 12px 24px;
+        gap: 20px;
+    }
+
+    .livraison form {
+        padding: 18px 14px;
+    }
+
+    .livraison form ul li {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .livraison textarea,
+    .livraison input {
+        max-width: 100%;
+    }
+
+    .templates section {
+        margin-block: 12px;
+    }
+
+    .templates .recipe {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .onPlate img {
+        width: 120px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .texts {
+        width: 100%;
+    }
+
+    .texts p {
+        margin-inline: 0;
+    }
+
+    .templates section h2 {
+        margin: 4px auto 0;
+    }
+
+    .popular {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .div5 {
+        grid-column: auto;
+    }
+
+    .div1, .div2, .div3, .div4, .div5 {
+        max-width: 100%;
+        aspect-ratio: 1/1;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 16px 12px;
+        gap: 24px;
+    }
+
+    footer section {
+        width: 100%;
+    }
+
+    footer section ul li {
+        justify-content: center;
+    }
+}
+
+/* =====================================================
+   SMALL MOBILE  (max-width: 480px)
+   ===================================================== */
+@media (max-width: 480px) {
+    header nav ul {
+        padding-top: 45px;
+    }
+
+    header nav ul li img {
+        width: 48px;
+        height: 48px;
+    }
+
+    header nav ul li p {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+
+    .left h1 {
+        font-size: 2.6rem;
+    }
+
+    .left p {
+        font-size: 0.95rem;
+    }
+
+    .cadran {
+        gap: 8px;
+    }
+
+    .right img {
+        width: 75px;
+        border-radius: 12px;
+    }
+
+    .right .imgCenter {
+        width: 65px;
+        height: 65px;
+    }
+
+    #transition ul {
+        gap: 8px;
+    }
+
+    #transition i {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    .livraison form p {
+        font-size: 0.95rem;
+    }
+
+    .onPlate img {
+        width: 100px;
+        height: 80px;
+    }
+
+    .texts h1 {
+        font-size: 1.35rem;
+    }
+
+    .popular {
+        gap: 10px;
+    }
+
+    .popular h1 {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .popular p {
+        font-size: 0.7rem;
+        padding: 4px 6px;
+        min-width: 50px;
+    }
+
+    footer section a {
+        font-size: 0.8rem;
+    }
+
+    .copyright p {
+        font-size: 0.7rem;
+        padding-bottom: 12px;
+    }
 }
