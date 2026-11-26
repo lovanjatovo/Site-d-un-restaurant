@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Luxurious+Roman&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Luxurious+Roman&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 body {
     padding: 0;
     margin: 0;
@@ -9,6 +8,7 @@ body {
     background-size: cover;
     width: 100% auto;
 }
+
 header {
     padding: 0;
     margin: 0;
@@ -223,7 +223,6 @@ main {
     color: #fc8c24;
 }
 
-
 .livraison form p {
     text-align: center;
     font-size: 2.5vh;
@@ -240,7 +239,8 @@ main {
     justify-content: space-evenly;
 }
 
-.space1, .space2 {
+.space1,
+.space2 {
     padding-top: 13px;
 }
 
@@ -383,7 +383,11 @@ textarea::placeholder {
     background-image: url(pizza.jpg);
 }
 
-.div1, .div2, .div3, .div4, .div5 {
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
@@ -429,7 +433,7 @@ h3 {
     text-align: center;
 }
 
-footer{
+footer {
     background-color: #3b3725;
     width: 100% auto;
     padding: 1vh;
@@ -438,14 +442,14 @@ footer{
     justify-content: space-around;
 }
 
-footer section ul{
+footer section ul {
     text-align: center;
     display: block;
     list-style: none;
     gap: 18px;
 }
 
-footer section ul li{
+footer section ul li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -453,25 +457,25 @@ footer section ul li{
     gap: 8px;
 }
 
-footer section ul li i{
+footer section ul li i {
     color: #fbf5df;
     font-size: 20px;
 }
 
-footer section h1{
+footer section h1 {
     color: #fbf5df;
     font-size: 20px;
     font-weight: bold;
 }
 
-footer section a{
+footer section a {
     color: #fbf5df;
     font-size: 16px;
     text-decoration: none;
 }
 
 .copyright {
-    background-color:#3b3725;
+    background-color: #3b3725;
     margin: 0;
     padding: 0;
     display: flex;
@@ -479,7 +483,7 @@ footer section a{
     align-items: center;
 }
 
-.copyright p{
+.copyright p {
     font-size: 2vh;
     color: #ffffffb6;
     font-family: 'Times New Roman', Times, serif;
@@ -487,3 +491,9 @@ footer section a{
     padding: 0;
     padding-bottom: 1.8vh;
 }
+
+@media (width>1240px) {}
+
+@media (width>780px) {}
+
+@media (width>250px) {}
