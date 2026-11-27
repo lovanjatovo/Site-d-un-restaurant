@@ -59,7 +59,7 @@ main {
     padding: 0;
 }
 
-#main1 {
+#acceuil {
     margin-top: 8vh;
     display: flex;
     justify-content: center;
@@ -69,12 +69,12 @@ main {
     gap: 15vh;
 }
 
-.left {
+.gauche {
     padding: 4px;
     color: #fbf5df;
 }
 
-.left h1 {
+.gauche h1 {
     font-size: 16vh;
     margin: 0;
     padding: 0;
@@ -83,7 +83,7 @@ main {
     font-family: "Luxurious Roman", serif;
 }
 
-.left p {
+.gauche p {
     text-align: center;
     font-weight: 200;
     font-size: 3.5vh;
@@ -92,7 +92,7 @@ main {
     font-family: "Courgette", cursive;
 }
 
-.left button {
+.gauche button {
     display: flex;
     margin: auto;
     padding: 1vh;
@@ -110,14 +110,14 @@ main {
     font-family: "Luxurious Roman", serif;
 }
 
-.left button:hover {
+.gauche button:hover {
     background-color: #fbf5dfa9;
     color: #3b3725;
     cursor: pointer;
     border: solid #3b3725 3px;
 }
 
-.right {
+.droite {
     padding: 4px;
     display: flex;
 }
@@ -130,14 +130,14 @@ main {
     padding-inline: 10px;
 }
 
-.right img {
+.droite img {
     width: 25vh;
     aspect-ratio: 1/1;
     border-radius: 18px;
     border: solid 1.5px white;
 }
 
-.right .imgCenter {
+.droite .imgCenter {
     position: relative;
     right: 50%;
     height: 25vh;

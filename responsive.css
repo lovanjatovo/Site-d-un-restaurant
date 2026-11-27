@@ -54,32 +54,32 @@
         object-fit: cover;
     }
     /* --- Section d'accueil : texte puis images, en colonne --- */
-    #main1 {
+    #acceuil {
         flex-direction: column;
         padding: 5vh 6vw 8vh;
         gap: 6vh;
         margin-top: 4vh;
     }
-    .left {
+    .gauche {
         width: 100%;
         box-sizing: border-box;
     }
-    .left h1 {
+    .gauche h1 {
         font-size: clamp(64px, 16vw, 130px);
     }
-    .left p {
+    .gauche p {
         font-size: clamp(17px, 2.6vw, 24px);
         padding-inline: 4%;
         line-height: 1.5;
     }
-    .left button {
+    .gauche button {
         width: fit-content;
         min-width: 200px;
         padding: 10px 32px;
         font-size: 24px;
     }
     /* --- Grille d'images : l'image du centre est centrée en absolu --- */
-    .right {
+    .droite {
         --size: clamp(120px, 24vw, 220px);
         position: relative;
         align-self: center;
@@ -89,12 +89,12 @@
         gap: clamp(14px, 3vw, 30px);
         padding: 0;
     }
-    .right img {
+    .droite img {
         width: var(--size);
         height: var(--size);
         object-fit: cover;
     }
-    .right .imgCenter {
+    .droite .imgCenter {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -276,21 +276,21 @@
         top: 8px;
         left: 8px;
     }
-    #main1 {
+    #acceuil {
         padding: 4vh 5vw 6vh;
         gap: 5vh;
     }
-    .left h1 {
+    .gauche h1 {
         font-size: clamp(56px, 19vw, 90px);
     }
-    .left p {
+    .gauche p {
         font-size: 17px;
     }
-    .left button {
+    .gauche button {
         min-width: 170px;
         font-size: 20px;
     }
-    .right {
+    .droite {
         --size: 36vw;
     }
     .cadran {
